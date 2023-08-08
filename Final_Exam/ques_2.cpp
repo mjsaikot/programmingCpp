@@ -1,31 +1,25 @@
 #include <bits/stdc++.h>
-
+/*Write a program to determine if a given string contains the word "Ratul." 
+If the word is present in the string, 
+the program should output "YES," otherwise it should output "NO."*/
 using namespace std;
 
 int main() {
    string s;
-   getline(cin,s);
+   getline(cin, s);
    stringstream ss(s);
+   bool found = false;
    string word;
-   int cnt = 0;
-//   string found = "Ratul";
-   while(ss >> word)
-   {
-    if(word.find("Ratul"))
-    {
-        cnt++;
-    }
-    
-   cout<<word.find("Ratul")<<endl;
+   while (ss >> word) {
+      if (word == "Ratul") {
+         found = true;
+         break;
+      }
    }
-//   if(flag == 1)
-//   {
-//       cout<<"YES";
-    
-//   }
-//   else {
-//       cout<<"NO";
-//   }
-   
+   if (found == true) {
+      cout << "YES" << endl;
+   } else {
+      cout << "NO" << endl;
+   }
    return 0;
 }
